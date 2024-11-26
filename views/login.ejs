@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+      <div class="header-top d-flex align-items-center justify-content-between">
+         <div class="logo d-flex align-items-center gap-2">
+            <div class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </div>
+            <div class="logo-icon">
+               <img src="/images/logo.svg" alt="Logo">
+            </div>
+           
+
+         </div>
+         
+      </div>
+        
+     </header>
+
+
+
+     <!-- Start Basic Data Section -->
+      <section class="basic-data">
+         <div class="corner-shape">
+            
+            <svg width="667" height="600" viewBox="0 0 667 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M655 93.5C659.884 66 666 36 667 0H0V600C38.8119 600 124.596 594.486 189.901 581.284C295.783 559.881 375.509 513.023 386.733 505.321C433.086 473.513 526.184 414.751 594.653 288.44C630.484 222.34 648.517 130 655 93.5Z" fill="#067D43"/>
+            </svg>
+   
+         </div>
+         <div class="container">
+            <div class="row">
+
+              
+            </div>
+            <div class="row d-flex justify-content-center text-center mt-3">
+               <div class="col-xl-6">
+                    <form action="/login" method="post" id="form">
+
+                        <span id="form_header">تسجيل الدخول</span>
+
+                        <div>
+                           <label for="username">الاسم</label>
+                           <% if (typeof usererror !== 'undefined' && usererror) { %>
+                              <div style="display: flex; justify-content: flex-start; color: rgb(255, 20, 20);">
+                                 <div class="alert alert-danger" role="alert">
+                                    <%= usererror %>
+                                </div>
+                              </div>
+                          <% } %>
+                           <input class="form_input" type="text" id="username" name="username" required>
+                       </div>
+  
+                       <div>
+                           <label for="password">كلمة المرور</label>
+                           <% if (typeof passerror !== 'undefined' && passerror) { %>
+                              <div style="display: flex; justify-content: flex-start; color: rgb(255, 20, 20);">
+                                 <div class="alert alert-danger" role="alert">
+                                    <%= passerror %>
+                                </div>
+                              </div>
+                          <% } %>
+                           <input class="form_input" type="password" id="password" name="password" required>
+                       </div>
+
+                        <a href="/update"> نسيت كلمة المرور </a>
+
+                        <button id="form_button" type="submit">تسجيل الدخول</button>
+                        <a href="/signup"> مستخدم جديد </a>
+                    </form>
+               </div>
+            </div>
+            
+         </div>
+   </section>
+   <!-- End Basic Data Section -->
+
+   <footer  class=" p-0 isNotMobile">
+      <div class="container">
+         <div class="d-flex justify-content-between flex-wrap">
+            <div class="col-lg-7 text-md-left  py-md-4 pt-4">
+               <div class="col-lg-12 pb-2">
+                  <p class="footer-head font-weight-bold">روابط </p>
+               </div>
+               <div class="col-lg-12">
+                  <p class="footer-links">
+                     <a href="" class="vertical-line">الشروط والأحكام </a>
+                     <a href="" class="vertical-line">الأسئلة الشائعة</a>
+                     <a href="" class="vertical-line"> اتفاقية الاستخدام</a>
+                     <a href="">اكاديمية ريف</a>
+                  </p>
+               </div>
+            </div>
+            <div class="col-lg-3 text-md-left  py-md-4 pt-4">
+               <div class="col-lg-12 pb-2">
+                  <p class="footer-head font-weight-bold">اتصل بنا </p>
+               </div>
+               <div class="col-lg-12">
+                  <p class="footer-links d-flex justify-content-lg-start justify-content-center">
+                     <a href="" target="_blank" class="pb-2 d-block d-md-inline-block"><img src="/images/instagram.svg" alt=""></a>
+                     <a href="" class="pb-2 d-block d-md-inline-block"><img src="/images/phone-call.svg" alt=""></a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12 copyright">
+       <p class="align-middle m-0">جميع الحقوق محفوظة 2024م</P>
+      </div>   
+   </footer>
+     <script src="/js/main_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main_style.css">
+</head>
+<body>
+    <header class="header" id="header">
+      <div class="header-top d-flex align-items-center justify-content-between">
+         <div class="logo d-flex align-items-center gap-2">
+            <div class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </div>
+
+            <div class="logo-icon">
+               <img src="/images/logo.svg" alt="Logo">
+            </div>
+           
+
+         </div>
+         <div class="user d-flex align-items-center gap-2">
+            
+            <% if (username) { %>
+               <div style="display: flex; flex-direction: column;">
+                  <span> ! مرحبا <%= username %>  </span>
+                  <a href="/logout" class=" d-none d-md-block user-name"> تسجيل الخروج </a>
+               </div>
+               
+               
+               <% } else { %>
+                  <a href="/login" class=" d-none d-md-block user-name"> تسجيل الدخول </a>
+                  <% } %>
+                  <span class="user-icon">
+                    <img src="/images/user_icon.svg" alt="user"> 
+                  </span>
+                  
+         </div>
+         
+      </div>
+        <section class="wrapper container">
+          
+           <span class="overlay"></span>
+           <nav class="navbar" id="navbar">
+              <ul class="menu" id="menu">
+                 <li class="menu-item"><a href="#" class="menu-link">الصفحة الرئيسية</a></li>
+                 <li class="menu-item menu-dropdown">
+                    <span class="menu-link" data-toggle="submenu">تفاصيل الطلب
+                       <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5389 7.74398L9.91391 13.369C9.86167 13.4213 9.79963 13.4628 9.73134 13.4911C9.66306 13.5194 9.58986 13.534 9.51594 13.534C9.44202 13.534 9.36882 13.5194 9.30053 13.4911C9.23225 13.4628 9.17021 13.4213 9.11797 13.369L3.49297 7.74398C3.38742 7.63844 3.32812 7.49528 3.32812 7.34602C3.32812 7.19675 3.38742 7.05359 3.49297 6.94805C3.59852 6.8425 3.74167 6.7832 3.89094 6.7832C4.0402 6.7832 4.18336 6.8425 4.28891 6.94805L9.51594 12.1758L14.743 6.94805C14.7952 6.89578 14.8573 6.85433 14.9256 6.82604C14.9938 6.79776 15.067 6.7832 15.1409 6.7832C15.2148 6.7832 15.288 6.79776 15.3563 6.82604C15.4246 6.85433 15.4866 6.89578 15.5389 6.94805C15.5912 7.00031 15.6326 7.06235 15.6609 7.13064C15.6892 7.19892 15.7038 7.27211 15.7038 7.34602C15.7038 7.41993 15.6892 7.49311 15.6609 7.5614C15.6326 7.62968 15.5912 7.69172 15.5389 7.74398Z" fill="white"/>
+                        </svg>
+                        </span>
+                     </span>
+                    <ul class="submenu">
+                       <li class="submenu-item"><a href="#" class="submenu-link">Feature Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Feature Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Feature Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Feature Link</a></li>
+                    </ul>
+                 </li>
+                 <li class="menu-item menu-dropdown">
+                     <span class="menu-link" data-toggle="submenu">الأهلية والإستحقاق
+                        <span>
+                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M15.5389 7.74398L9.91391 13.369C9.86167 13.4213 9.79963 13.4628 9.73134 13.4911C9.66306 13.5194 9.58986 13.534 9.51594 13.534C9.44202 13.534 9.36882 13.5194 9.30053 13.4911C9.23225 13.4628 9.17021 13.4213 9.11797 13.369L3.49297 7.74398C3.38742 7.63844 3.32812 7.49528 3.32812 7.34602C3.32812 7.19675 3.38742 7.05359 3.49297 6.94805C3.59852 6.8425 3.74167 6.7832 3.89094 6.7832C4.0402 6.7832 4.18336 6.8425 4.28891 6.94805L9.51594 12.1758L14.743 6.94805C14.7952 6.89578 14.8573 6.85433 14.9256 6.82604C14.9938 6.79776 15.067 6.7832 15.1409 6.7832C15.2148 6.7832 15.288 6.79776 15.3563 6.82604C15.4246 6.85433 15.4866 6.89578 15.5389 6.94805C15.5912 7.00031 15.6326 7.06235 15.6609 7.13064C15.6892 7.19892 15.7038 7.27211 15.7038 7.34602C15.7038 7.41993 15.6892 7.49311 15.6609 7.5614C15.6326 7.62968 15.5912 7.69172 15.5389 7.74398Z" fill="white"/>
+                         </svg>
+                         </span>
+                      </span>
+                    <ul class="submenu">
+                       <li class="submenu-item"><a href="#" class="submenu-link">Discover Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Discover Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Discover Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Discover Link</a></li>
+                    </ul>
+                 </li>
+                 <li class="menu-item menu-dropdown">
+                     <span class="menu-link" data-toggle="submenu">حالة الدفعات
+                        <span>
+                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M15.5389 7.74398L9.91391 13.369C9.86167 13.4213 9.79963 13.4628 9.73134 13.4911C9.66306 13.5194 9.58986 13.534 9.51594 13.534C9.44202 13.534 9.36882 13.5194 9.30053 13.4911C9.23225 13.4628 9.17021 13.4213 9.11797 13.369L3.49297 7.74398C3.38742 7.63844 3.32812 7.49528 3.32812 7.34602C3.32812 7.19675 3.38742 7.05359 3.49297 6.94805C3.59852 6.8425 3.74167 6.7832 3.89094 6.7832C4.0402 6.7832 4.18336 6.8425 4.28891 6.94805L9.51594 12.1758L14.743 6.94805C14.7952 6.89578 14.8573 6.85433 14.9256 6.82604C14.9938 6.79776 15.067 6.7832 15.1409 6.7832C15.2148 6.7832 15.288 6.79776 15.3563 6.82604C15.4246 6.85433 15.4866 6.89578 15.5389 6.94805C15.5912 7.00031 15.6326 7.06235 15.6609 7.13064C15.6892 7.19892 15.7038 7.27211 15.7038 7.34602C15.7038 7.41993 15.6892 7.49311 15.6609 7.5614C15.6326 7.62968 15.5912 7.69172 15.5389 7.74398Z" fill="white"/>
+                         </svg>
+                         </span>
+                      </span>
+                    <ul class="submenu">
+                       <li class="submenu-item"><a href="#" class="submenu-link">Resource Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Resource Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Resource Link</a></li>
+                       <li class="submenu-item"><a href="#" class="submenu-link">Resource Link</a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </nav>
+        </section>
+     </header>
+
+
+
+     <!-- Start Basic Data Section -->
+      <section class="basic-data">
+         <div class="corner-shape">
+            
+            <svg width="667" height="600" viewBox="0 0 667 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M655 93.5C659.884 66 666 36 667 0H0V600C38.8119 600 124.596 594.486 189.901 581.284C295.783 559.881 375.509 513.023 386.733 505.321C433.086 473.513 526.184 414.751 594.653 288.44C630.484 222.34 648.517 130 655 93.5Z" fill="#067D43"/>
+            </svg>
+   
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 h-auto mb-3">
+                  <div class="box-wrapper h-100">
+                     <div class="box-header shape">
+                        <h2>بيانات الاستحقاق</h2>
+                        <button class="outline-btn">عرض الأسباب</button>
+                     </div>
+                     <div class="box-content">
+                        <div class="info-box small text-center">
+                           <div class="">
+                              <img src="/images/Check.svg" alt="check">
+                           </div> 
+                           <p class="success">مستحق للدعم</p>
+                        </div>
+                        <div class="info-box large d-flex justify-content-between align-items-center text-center">
+                           <div class="round-num">
+                              <p class="sub-heading">رقم الدورة</p>
+                              <p class="value">11</p>
+                           </div>
+                           <div class="date">
+                              <p class="sub-heading">تاريخ دراسة الأهلية</p>
+                              <p class="value">10-11-2024</p>
+                           </div>  
+                        </div>
+                      
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 h-auto mb-3">
+                  <div class="box-wrapper h-100">
+                     <div class="box-header d-md-flex">
+                        <h2 class="text-center text-md-start"> برنامج دعم الأسر الريفية المنتجة</h2>
+                        <div class="start-date text-center text-md-start">
+                           <p>باقي علي بداية الموسم</p>
+                           <div class="d-flex align-items-center justify-content-center gap-3">
+                              <div class="days text-center">
+                                 <span class="value">13</span>
+                                 <p class="name">يوم</p>
+                              </div>
+                              <div class="months text-center">
+                                 <span class="value">3</span>
+                                 <p class="name">شهر</p>
+                              </div>
+                           </div>
+                          
+                        </div>
+                     </div>
+                     <div class="box-content">
+                        <div class="info-box small">
+                           <h4 class="heading">حالة الطلب</h4>
+                           <div class="d-flex align-items-center">
+                              <span class="status green"></span>
+                              <span class="value">تم قبول الطلب</span>
+                           </div>
+
+                           
+                        </div>
+                        <div class="info-box large  ">
+                           <h4 class="heading">حالة الدفعة</h4>
+
+                          <div class="d-flex justify-content-between align-items-center">
+                           <div class="round-num">
+                              <p class="sub-heading">الأصول</p>
+                              <div class="d-flex align-items-center">
+                                 <span class="status"></span>
+                                 <span class="value">لا يوجد</span>
+                              </div>
+                           </div>
+                           <div class="date">
+                              <p class="sub-heading">الإنتاج</p>
+                              <div class="d-flex align-items-center ">
+                                 <span class="status "></span>
+                                 <span class="value">لا يوجد</span>
+                              </div>
+                           </div>  
+                          </div>
+                        </div>
+                      
+                     </div>
+                  </div>
+               </div>            
+            </div>
+            <div class="row d-flex justify-content-center text-center mt-3">
+               <div class="col-xl-6">
+                  <div class="box-wrapper d-flex justify-content-center ">
+                     <div class="add-new-program ">
+                        <button class="add-btn ">
+                           <span>    
+                              <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M87.582 50.5527C87.582 51.3815 87.2528 52.1764 86.6667 52.7624C86.0807 53.3485 85.2858 53.6777 84.457 53.6777H53.207V84.9277C53.207 85.7565 52.8778 86.5514 52.2917 87.1374C51.7057 87.7235 50.9108 88.0527 50.082 88.0527C49.2532 88.0527 48.4584 87.7235 47.8723 87.1374C47.2863 86.5514 46.957 85.7565 46.957 84.9277V53.6777H15.707C14.8782 53.6777 14.0834 53.3485 13.4973 52.7624C12.9113 52.1764 12.582 51.3815 12.582 50.5527C12.582 49.7239 12.9113 48.9291 13.4973 48.343C14.0834 47.757 14.8782 47.4277 15.707 47.4277H46.957V16.1777C46.957 15.3489 47.2863 14.5541 47.8723 13.968C48.4584 13.382 49.2532 13.0527 50.082 13.0527C50.9108 13.0527 51.7057 13.382 52.2917 13.968C52.8778 14.5541 53.207 15.3489 53.207 16.1777V47.4277H84.457C85.2858 47.4277 86.0807 47.757 86.6667 48.343C87.2528 48.9291 87.582 49.7239 87.582 50.5527Z" fill="#DBAF2C"/>
+                              </svg>
+                           </span>
+                           <h2>إضافة برنامج جديد</h2>
+                        </button>
+                        <p>جاري الإضافة...</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+   </section>
+   <!-- End Basic Data Section -->
+
+   <footer  class=" p-0 isNotMobile">
+      <div class="container">
+         <div class="d-flex justify-content-between flex-wrap">
+            <div class="col-lg-7 text-md-left  py-md-4 pt-4">
+               <div class="col-lg-12 pb-2">
+                  <p class="footer-head font-weight-bold">روابط </p>
+               </div>
+               <div class="col-lg-12">
+                  <p class="footer-links">
+                     <a href="" class="vertical-line">الشروط والأحكام </a>
+                     <a href="" class="vertical-line">الأسئلة الشائعة</a>
+                     <a href="" class="vertical-line"> اتفاقية الاستخدام</a>
+                     <a href="">اكاديمية ريف</a>
+                  </p>
+               </div>
+            </div>
+            <div class="col-lg-3 text-md-left  py-md-4 pt-4">
+               <div class="col-lg-12 pb-2">
+                  <p class="footer-head font-weight-bold">اتصل بنا </p>
+               </div>
+               <div class="col-lg-12">
+                  <p class="footer-links d-flex justify-content-lg-start justify-content-center">
+                     <a href="" target="_blank" class="pb-2 d-block d-md-inline-block"><img src="/images/instagram.svg" alt=""></a>
+                     <a href="" class="pb-2 d-block d-md-inline-block"><img src="/images/phone-call.svg" alt=""></a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12 copyright">
+       <p class="align-middle m-0">جميع الحقوق محفوظة 2024م</P>
+      </div>   
+   </footer>
+     <script src="/main_script.js"></script>
+</body>
+</html>
